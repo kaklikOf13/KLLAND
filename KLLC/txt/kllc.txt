@@ -1,0 +1,48 @@
+OPCODES:
+    STOP                                      = 00
+    LOAD_GLOBAL<REG><GLOBAL>                  = 01
+    LOAD_LOCAL<REG><LOCAL>                    = 02
+    EXIT_SCOPE                                = 03
+    RESET_SCOPE                               = 04
+    ENTER_SCOPE<SCOPE>                        = 05
+    EXECUTE_LOCAL<LOCAL>                      = 06
+    EXECUTE_GLOBAL<GLOBAL>                    = 07
+    MOVE_TO_GLOBAL<REG><GLOBAL>               = 08
+    MOVE_TO_LOCAL<REG><LOCAL>                 = 09
+    MOVE_TO_REG<REG1><REG2>                   = 0a
+    MOVE_LOCAL_TO_GLOBAL<LOCAL><GLOBAL>       = 0b
+    MOVE_LOCAL_TO_LOCAL<LOCAL1><LOCAL2>       = 0c
+    MOVE_GLOBAL_TO_LOCAL<LOCAL><GLOBAL>       = 0d
+    MOVE_GLOBAL_TO_GLOBAL<GLOBAL2><GLOBAL2>   = 0e
+    SUM1<REG><LOCAL>                          = 0f
+    SUM2<REG><GLOBAL>                         = 10
+    SUM3<REG1><REG2>                          = 11
+    SUM4<REG><64>                             = 12
+    SUB1<REG><LOCAL>                          = 13
+    SUB2<REG><GLOBAL>                         = 14
+    SUB3<REG1><REG2>                          = 15
+    SUB4<REG><64>                             = 16
+    MULT1<REG><LOCAL>                         = 17
+    MULT2<REG><GLOBAL>                        = 18
+    MULT3<REG1><REG2>                         = 19
+    MULT4<REG><64>                            = 1a
+    DIV1<REG><LOCAL>                          = 1b
+    DIV2<REG><GLOBAL>                         = 1c
+    DIV3<REG1><REG2>                          = 1d
+    DIV4<REG><VALUE>                          = 1e
+    RETURN1<GLOBAL>                           = 1f
+    RETURN2<LOCAL>                            = 20
+    RETURN3<REG>                              = 21
+    MOVE_64_TO_REG<REG><64>                   = 22
+    MOVE_VALUE_TO_GLOBAL<GLOBAL><SIZE><VALUE> = 23
+    MOVE_VALUE_TO_LOCAL<LOCAL><SIZE><VALUE>   = 24
+
+TYPES:
+    REG    = 8
+    LOCAL  = 64
+    GLOBAL = 64
+    VAR    = inf
+    SCOPE  = 32
+REGS:
+    AC 64       = 0
+    RETREG VAR  = 1
